@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+:root {
+    --color-naranja: #ff6309;
+    --color-gris:#2c2c2c
+}
+
+header{
+    background-color: var(--color-gris);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 3rem;
+}
+
+.imagen1 img{
+    width: min(100%, 5vw);
+    height: auto;
+}
+
+.contenedor1 {
+    background-image: url(../assets/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 59rem;
+    display: flex;
+    padding: 8rem 10rem;
+    align-items: flex-end;
+}
+.divContenedor1 {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.divContenedor1 h2 {
+    font-size: clamp(4rem, 7vw, 8rem);
+    letter-spacing: 0.2rem;
+}
+.divContenedor1 p {
+    width: 50%;
+    font-size: 1.7rem;
+}
+.bottonNaranaja {
+    padding: 0.5rem 2rem;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: var(--color-naranja);
+    border-radius: 2px;
+    height: auto;
+    
+}
+
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    gap: 3rem;
+    padding: 7rem;
+}
+#colorNaranja{
+    background-color: var(--color-naranja);
+}
+#colorGris {
+    background-color: var(--color-gris);
+}
+.divDanceTour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.divDanceTour h2 {
+    font-size: 3rem;
+}
+.divDanceTour p {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    padding: 20px;
+    max-width: 80rem;
+    width: 100%;
+}
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    border-radius: 5px;
+    background-color: var(--color-gris);
+}
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.tarjeta .info {
+    padding: 0.8rem;
+}
+
+.tarjeta h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.tarjeta p {
+    font-size: 14px;
+
+}
