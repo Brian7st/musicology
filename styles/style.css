@@ -1,18 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
-
 :root {
     --color-naranja: #ff6309;
-    --color-gris:#2c2c2c
+    --color-gris: #2c2c2c;
+
+    /* Tamaños responsivos */
+    --fs-small: clamp(0.9rem, 1.5vw, 1rem);
+    --fs-base: clamp(0.9rem, 2vw, 1.25rem);
+    --fs-title: clamp(1.8rem, 4vw, 3rem);
+    --fs-hero: clamp(2.1rem, 7vw, 8rem);
 }
 
-header{
+header {
     background-color: var(--color-gris);
     display: flex;
     justify-content: space-between;
@@ -20,7 +23,7 @@ header{
     padding: 0.6rem 3rem;
 }
 
-.imagen1 img{
+.imagen1 img {
     width: min(100%, 5vw);
     height: auto;
 }
@@ -28,26 +31,34 @@ header{
 .contenedor1 {
     background-image: url(../assets/background.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    height: 59rem;
+    height: auto;
+    min-height: 90vh;
+    padding: 0rem 0rem 5rem 5rem;
     display: flex;
-    padding: 8rem 10rem;
     align-items: flex-end;
 }
+
 .divContenedor1 {
+    width: auto;
+    height: auto;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
+
 .divContenedor1 h2 {
-    font-size: clamp(4rem, 7vw, 8rem);
+    font-size: var(--fs-hero);
     letter-spacing: 0.2rem;
 }
+
 .divContenedor1 p {
     width: 50%;
-    font-size: 1.7rem;
+    font-size: var(--fs-base);
 }
+
 .bottonNaranaja {
     padding: 0.5rem 2rem;
     color: #ffffff;
@@ -55,35 +66,42 @@ header{
     background-color: var(--color-naranja);
     border-radius: 2px;
     height: auto;
-    
+    font-size: var(--fs-small);
 }
 
-.contenedor2{
+.contenedor2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #ffffff;
     gap: 3rem;
-    padding: 7rem;
+    padding: 7rem 0rem;
 }
-#colorNaranja{
+
+.colorNaranja {
     background-color: var(--color-naranja);
+    padding: 3.4rem 0.1rem 1rem 0rem;
 }
-#colorGris {
+
+.colorGris {
     background-color: var(--color-gris);
 }
-.divDanceTour{
+
+.divDanceTour {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
 }
+
 .divDanceTour h2 {
-    font-size: 3rem;
+    font-size: var(--fs-title);
 }
+
 .divDanceTour p {
     text-align: center;
-    font-size: 1.3em;
+    font-size: var(--fs-base);
+    width: 100%;
 }
 
 .tarjetas {
@@ -94,33 +112,127 @@ header{
     max-width: 80rem;
     width: 100%;
 }
+
 .tarjeta {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
+    gap: 0.4rem;
     border-radius: 5px;
-    background-color: var(--color-gris);
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
 }
+
 .tarjeta img {
     width: 100%;
     height: auto;
     display: block;
 }
+
+.tarjeta.colorNaranja > img {
+    width: min(100%, 5vw);
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
 .info {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 1.3rem;
+    align-items: center;
 }
+
 .tarjeta .info {
-    padding: 0.8rem;
+    padding: 1rem;
 }
 
 .tarjeta h2 {
-    font-size: 20px;
+    font-size: var(--fs-base);
     letter-spacing: 1px;
 }
-.tarjeta p {
-    font-size: 14px;
 
+.tarjeta p {
+    font-size: var(--fs-small);
+}
+
+.bottonNegro {
+    padding: 0.6rem 4rem;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: var(--color-gris);
+    border-radius: 2px;
+    height: auto;
+    font-size: var(--fs-small);
+}
+
+.info button {
+    padding: 0.9rem 1rem;
+    width: 100%;
+    max-width: 18rem;
+    color: #ffffff;
+    background-color: var(--color-gris);
+    border: none;
+    font-size: var(--fs-small);
+}
+
+footer {
+    background-color: var(--color-naranja);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0rem;
+    font-size: var(--fs-small);
+}
+
+
+@media (max-width: 920px){
+    .contenedor1 {
+        padding: 4rem 2rem;
+        min-height: 50vh;
+    }
+    .imagen1 img {
+        width: min(100%, 9vw);
+        height: auto;
+    }
+    .tarjetas{
+        gap: 2rem;
+    }
+    .tarjeta.colorNaranja > img{
+        width: min(100%, 8vw);
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor1 {
+        padding: 4rem 2rem;
+        min-height: 35vh;
+    }
+    .imagen1 img {
+        width: min(100%, 14vw);
+        height: auto;
+    }
+
+    .divContenedor1 p {
+        width: 75%;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .info button {
+        width: 100%;
+    }
+}
+@media (max-width: 480px){
+    .contenedor2{
+        padding: 2rem 1rem;
+    }
+    footer {
+        font-size: 0.7em;
+    }
+    
 }
