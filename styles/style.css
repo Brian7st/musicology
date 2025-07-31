@@ -231,6 +231,10 @@ footer {
     .contenedor2{
         padding: 2rem 1rem;
     }
+    .imagen1 img {
+        width: min(100%, 18vw);
+        height: auto;
+    }
     footer {
         font-size: 0.7em;
     }
